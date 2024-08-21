@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NGOMA - Login</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .nav {
+            text-align: center;
+            padding: 20px 0;
+            background: #1DB954;
+        }
+        .bar {
+            margin: 0 10px;
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+        }
+        .bar:hover {
+            text-decoration: underline;
+        }
+        .Login {
+            width: 300px;
+            margin: 100px auto;
+            padding: 20px;
+            background: #282828;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .Login h2 {
+            margin-bottom: 20px;
+            color: #1DB954;
+            text-transform: uppercase;
+            font-size: 24px;
+        }
+        .Login label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        .Login input {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 5px;
+            background: #404040;
+            color: white;
+        }
+        .btn {
+            width: 100%;
+            padding: 10px;
+            background: #1DB954;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        .btn:hover {
+            background: #14833B;
+        }
+        .Login a {
+            color: #1DB954;
+            text-decoration: none;
+        }
+        .Login a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <a class="bar" href="about_us.html" target="_self">About Us</a>
+        <a class="bar" href="services.html" target="_self">Services</a>
+        <a class="bar" href="contact_us.html" target="_self">Contact Us</a>
+    </div>
+    <div class="Login">
+        <h2>Login</h2>
+        <label for="Email">Email</label>
+        <input type="text" id="Email" name="Email" required>
+        <label for="Password">Password</label>
+        <input type="password" id="password" name="password" required>
+        <button class="btn" onclick="login()">Login</button>
+        <label for="Remember">Remember me</label>
+        <input type="checkbox" id="Remember">
+        <p>Don't have an account? <a href="sign up.html">Sign up</a></p>
+    </div>
+
+    <script>
+        function login() {
+            const email = document.getElementById('Email').value;
+            const password = document.getElementById('password').value;
+
+            // For demonstration purposes, using hardcoded credentials.
+            const validEmail = "test@example.com";
+            const validPassword = "password123";
+
+            if (email === validEmail && password === validPassword) {
+                window.location.href = 'home.html'; // Redirect to home page
+            } else {
+                alert('Invalid email or password.');
+            }
+        }
+    </script>
+</body>
+</html>
